@@ -1,0 +1,88 @@
+  <div>
+    <h4>Generar Archivo</h4>
+  </div>
+  <input class="pb" />
+
+  <div class="col-md-8 form-group">
+    <button type="button" class="btn btn-success position-absoluted position-absolute top-1 start-50 " (click)="ImportControl">Enviar</button>
+    <input
+      type="file"
+      class="form-control"
+      (change)="addfile($event)"
+      accept=".xls, xlsx"
+      placeholder="Upload file"
+      accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+    />
+    <h4 *ngIf="billList" class="position-absolute top-0 end-0">Cantidad {{ billList.length }}</h4>
+  </div>
+
+  <table class="table table-sm table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th class="col-1">idElectronico</th>
+        <th class="col-1">numero</th>
+        <th class="col-1">identificacion</th>
+        <th class="col-3">nombre</th>
+        <th class="col-1">Codigo</th>
+        <th class="col-1">Regalo</th>
+        <th class="col-2">Descripcion</th>
+        <th class="col-1">valorUnitario</th>
+        <th class="col-1">Cantidad</th>
+        <th class="col-1">valorBruto</th>
+        <th class="col-1">impuestos</th>
+        <!-- <th class="col-1">Cargos</th>
+        <th class="col-1">Descuentos</th> -->
+        <th class="col-1">retenciones</th>
+        <th class="col-3">total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let factura of billList">
+        <th class="align-middle">
+          {{ factura.idElectronico }}
+        </th>
+        <td class="align-middle">
+          {{ factura.numero }}
+        </td>
+        <td class="align-middle">
+          {{ factura.identificacion }}
+        </td>
+        <td class="align-middle">
+          {{ factura.nombre }}
+        </td>
+        <td class="align-middle">
+          {{ factura.codigo }}
+        </td>
+        <td class="align-middle">
+          {{ factura.regalo }}
+        </td>
+        <td class="align-middle">
+          {{ factura.descripcion }}
+        </td>
+        <td class="align-middle">
+          {{ factura.valorUnitario | currency }}
+        </td>
+        <td class="align-middle">
+          {{ factura.cantidad }}
+        </td>
+        <td class="align-middle">
+          {{ factura.valorBruto | currency}}
+        </td>
+        <td class="align-middle">
+          {{ factura.impuestos | currency }}
+        </td>
+        <!-- <td class="align-middle">
+          {{ factura.Cargos }}
+        </td>
+        <td class="align-middle">
+          {{ factura.Descuentos }}
+        </td> -->
+        <td class="align-middle">
+          {{ factura.retenciones }}
+        </td>
+        <td class="align-middle">
+          {{ factura.total  | currency}}
+        </td>
+      </tr>
+    </tbody>
+  </table>

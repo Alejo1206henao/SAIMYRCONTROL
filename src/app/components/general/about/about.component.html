@@ -1,0 +1,34 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="about" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h6>{{project}}</h6>
+        <span class="badge bg-gray">{{date}}</span>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="saimyr">
+            <img src="assets/saimyr.png" alt="Logo de SAIMYR" class="logo">
+            <p>SAIMYR SOFTWARE S.A.S</p>
+        </div>
+        <div class="text-center">
+            <b class="text-gray">SISTEMA DE ADMINISTRACIÓN DE INFORMACIÓN MUNICIPAL Y RENTAS.</b>
+        </div>
+        <hr>
+        <div class="row mb-3">
+            <div class="col-6">
+                <img src="http://entidadesintegradas.com/entityimages/Escudo{{entity?.entityId}}.png"
+                    alt="Escudo de {nombreEntidad}" class="img-responsive img-entidad">
+            </div>
+            <div class="col-10 license">
+                <span>Licencia para uso exclusivo del <b>{{entity?.name}}</b></span>
+            </div>
+        </div>
+        <div class="justify">
+            Todos los derechos son reservados © SAIMYR S.A.S {{year}}.
+            Se prohibe la reproducción total o parcial de este producto.
+        </div>
+        <hr>
+        <div class="text-center">
+            Software diseñado y desarrollado por <a href="http://saimyr.co" target="_blank">SAIMYR Software.</a>
+        </div>
+    </div>
+</div>

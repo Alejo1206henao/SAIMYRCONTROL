@@ -1,0 +1,62 @@
+.flex-center {
+    display: flex;
+    place-items: center;
+}
+.header-smr {
+    display: flex;
+    background: #dcdcdc;
+    color: #767974;
+    height: 45px;
+}
+.menu-smr {
+    @extend .flex-center;
+    cursor: pointer;
+    & :hover {
+        color: #5d5f5b;
+    }
+}
+.icon {
+    margin-left: 20px;
+    font-size: 25px;
+    color: black;
+}
+.btn-white {
+    background: white;
+}
+.title-smr {
+    @extend .flex-center;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.slogan {
+    margin: 0 25px;
+    @extend .flex-center;
+    & img {
+        max-width: 100px;
+        cursor: pointer;
+    }
+}
+.session-smr {
+    margin: 0 15px;
+    margin-left: auto;
+    @extend .flex-center;
+}
+@media only screen and (max-width: 576px) {
+    .icon {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    .slogan {
+        margin: 0 15px 0 10px;
+        & img {
+            max-width: 75px;
+        }
+    }
+    .title-smr {
+        font-size: 16px;
+    }
+    .dropdown button {
+        font-size: 11px;
+    }
+}

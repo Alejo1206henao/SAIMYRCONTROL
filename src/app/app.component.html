@@ -1,0 +1,15 @@
+<smr-loading [show]="loading"></smr-loading>
+<div class="container-smr {{menu ? 'with-menu' : 'without-menu'}}">
+	<div class="header">
+		<app-header [change]="changeIcon" (changeMenu)="changeMenu($event)"></app-header>
+	</div>
+	<div class="menu">
+		<app-menu (selectItem)="selectItem($event)"></app-menu>
+	</div>
+	<div class="content scrollbar">
+		<div class="container">
+			<router-outlet></router-outlet>
+		</div>
+		<app-footer style="margin-top: auto;"></app-footer>
+	</div>
+</div>

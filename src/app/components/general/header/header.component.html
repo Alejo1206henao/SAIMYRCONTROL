@@ -1,0 +1,31 @@
+<div class="header-smr">
+	<div class="menu-smr" (click)="showMenu()"> <i class="fa fa-{{menu ? 'times' : 'bars'}} icon"
+			aria-hidden="true"></i>
+	</div>
+	<div class="slogan">
+		<img src="https://saimyr.co/images/app/SAIMYR%20software%20mediano.png" alt="">
+	</div>
+	<div class="title-smr">
+		<a href="/" class="text-dark">Facturacion</a>
+	</div>
+	<div class="session-smr">
+		<div class="dropdown">
+			<button class="btn btn-white btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
+				data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>
+				{{tokenPayload?.user}}
+			</button>	
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<li class="dropdown-item"><i class="fas fa-exchange-alt"></i> Cambiar contraseña</li>
+				<li class="dropdown-item" (click)="about()"><i class="fas fa-info-circle"></i> Acerca
+					de</li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li class="dropdown-item" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<app-about></app-about>

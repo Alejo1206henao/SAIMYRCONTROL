@@ -1,0 +1,16 @@
+<footer class="footer">
+    <div class="container pt-2 pb-0">
+        <ng-container *ngIf="entity">
+            <h6 class="entity">{{entity.motto}}</h6>
+            <h6 class="entity">Nit: {{entity.nit}},
+                Dirección: {{entity.address}}, Teléfono: {{entity.telephone}},
+                <a href="http://{{entity.web}}" target="_blank">{{entity.web}}</a>
+            </h6>
+            <h6 class="develop">Desarrollado por
+                <a class="develop-by" href="https://www.saimyr.com.co" target="_blank">
+                    <img width="80px" src="https://saimyr.co/images/app/saimyr-white.png">
+                </a>
+            </h6>
+        </ng-container>
+    </div>
+</footer>
